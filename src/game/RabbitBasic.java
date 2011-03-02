@@ -4,7 +4,8 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
 public class RabbitBasic {
-	static String base_character_location = "\\data\\defaultCharacter.png";
+	static String fs = std.strings.fs;
+	static String base_character_location = fs + "data" + fs + "defaultCharacter.png";
 	
 	Image basicCharacterImg = null;
 	
