@@ -5,7 +5,7 @@ import org.newdawn.slick.SlickException;
 
 public class RabbitBasic {
 	static String fs = std.strings.fs;
-	static String base_character_location = fs + "data" + fs + "defaultCharacter.png";
+	static String base_character_location = std.strings.home + fs + "data" + fs + "defaultCharacter.png";
 	
 	Image basicCharacterImg = null;
 	
@@ -20,7 +20,9 @@ public class RabbitBasic {
 	public float currentArc = 0;
 	
 	public RabbitBasic(){
+		System.err.println("Trying to load " +base_character_location);
 		try {
+			
 			basicCharacterImg = new Image(base_character_location);
 			x=0;
 			y = boot.booter.app.getHeight() - basicCharacterImg.getHeight();
@@ -29,6 +31,8 @@ public class RabbitBasic {
 		} catch (SlickException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			System.err.println("Error loading " +base_character_location);
+			
 		}
 	}
 	
